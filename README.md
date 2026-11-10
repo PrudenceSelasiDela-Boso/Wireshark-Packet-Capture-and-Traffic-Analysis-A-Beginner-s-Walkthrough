@@ -137,7 +137,7 @@ Now that the DNS cache was cleared, I was ready to capture network traffic.
 
 You should begin seeing packets appear on the screen.
 
-![alt text](
+![alt text](https://github.com/PrudenceSelasiDela-Boso/Wireshark-Packet-Capture-and-Traffic-Analysis-A-Beginner-s-Walkthrough/blob/main/stop%20cature.png)
 
 These are examples of network communication happening through your device.
 
@@ -150,7 +150,7 @@ While Wireshark was capturing traffic:
 3. Visit [https://networkwalks.com](https://networkwalks.com/).
 4. Wait for the website to load completely.
 
-![alt text](
+![alt text](https://github.com/PrudenceSelasiDela-Boso/Wireshark-Packet-Capture-and-Traffic-Analysis-A-Beginner-s-Walkthrough/blob/main/browse%20site.png)
 
 I used a separate browser session to carry out the exercise.
 
@@ -160,8 +160,6 @@ After the website had loaded:
 
 1. Return to Wireshark.
 2. Click the red square **Stop** button at the top-left corner.
-
-![alt text](
 
 This stops the live capture and allows you to examine the packets that have already been collected.
 
@@ -195,7 +193,7 @@ This filter tells Wireshark to show DNS packets relating to the website `network
 
 You should see the DNS query and its corresponding response, provided the query was captured successfully.
 
-![alt text](
+![alt text](https://github.com/PrudenceSelasiDela-Boso/Wireshark-Packet-Capture-and-Traffic-Analysis-A-Beginner-s-Walkthrough/blob/main/dns%20network%20walks.png)
 
 ### Step 2: Identify the source and destination IP addresses
 
@@ -250,7 +248,7 @@ Remember, the DNS server is responsible for providing the IP address associated 
 
 The IP address displayed there is the IP address returned for the website.
 
-![alt text](
+![alt text](https://github.com/PrudenceSelasiDela-Boso/Wireshark-Packet-Capture-and-Traffic-Analysis-A-Beginner-s-Walkthrough/blob/main/networkwalks%20address.png)
 
 ### Question 3: What is the IP address of networkwalks.com?
 
@@ -321,8 +319,6 @@ tls.handshake.type == 1
 
 Press Enter.
 
-![alt text]( 
-
 This filter displays TLS Client Hello packets.
 
 ### Step 2: Find the correct packet
@@ -340,7 +336,7 @@ Look through the results for the Client Hello packet associated with `networkwal
 
 You should find the website name displayed there.
 
-![alt text](
+![alt text](https://github.com/PrudenceSelasiDela-Boso/Wireshark-Packet-Capture-and-Traffic-Analysis-A-Beginner-s-Walkthrough/blob/main/server%20name.png)
 
 ### Question 4: Which website name (Server Name) is sent in the TLS Client Hello?
 
@@ -373,7 +369,7 @@ For example, HTTPS commonly uses port **443**.
 3. Expand the TCP section.
 4. Look for **Destination Port**.
 
-![alt text](
+![alt text](https://github.com/PrudenceSelasiDela-Boso/Wireshark-Packet-Capture-and-Traffic-Analysis-A-Beginner-s-Walkthrough/blob/main/port.png)
 
 
 For a normal HTTPS connection, you will commonly find:
