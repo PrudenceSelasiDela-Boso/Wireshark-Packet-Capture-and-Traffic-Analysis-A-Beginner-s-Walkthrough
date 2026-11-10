@@ -56,6 +56,8 @@ The first thing I did was download Wireshark.
 3. Download and install it.
 4. Follow the installation instructions until the setup is complete.
 
+![alt text](https://github.com/PrudenceSelasiDela-Boso/Wireshark-Packet-Capture-and-Traffic-Analysis-A-Beginner-s-Walkthrough/blob/main/download%20wireshark.png)
+
 Once installed, open Wireshark. You should see a list of available network interfaces, such as Wi-Fi and Ethernet.
 
 For this exercise, I used Wi-Fi because that was the network connection my laptop was using.
@@ -82,6 +84,8 @@ For this exercise, I wanted my laptop to perform a fresh DNS lookup so I could c
 4. Right-click it and select **Run as administrator**.
 5. If Windows asks for permission, allow it.
 
+![alt text](
+
 ### Step 2: Flush the DNS cache
 
 Type the following command:
@@ -94,6 +98,8 @@ Press Enter.
 
 You should see a message confirming that the DNS Resolver Cache was successfully flushed.
 
+![alt text](
+
 This means the stored DNS records have been cleared, allowing the device to perform a fresh lookup when we visit the website.
 
 ### ***Challenge I encountered: Command Prompt required elevation***
@@ -104,11 +110,15 @@ When I first entered the command, I received this message:
 The requested operation requires elevation.
 ```
 
+![alt text](
+
 At first, I wasn't sure what the problem was. After looking into it, I understood that the command needed administrator privileges.
 
 **How I resolved it:**
 
 I closed the Command Prompt window, searched for CMD again, and selected **Run as administrator** before entering the command.
+
+![alt text](
 
 That solved the problem.
 
@@ -127,6 +137,8 @@ Now that the DNS cache was cleared, I was ready to capture network traffic.
 
 You should begin seeing packets appear on the screen.
 
+![alt text](
+
 These are examples of network communication happening through your device.
 
 ### Step 2: Visit the website
@@ -138,6 +150,8 @@ While Wireshark was capturing traffic:
 3. Visit [https://networkwalks.com](https://networkwalks.com/).
 4. Wait for the website to load completely.
 
+![alt text](
+
 I used a separate browser session to carry out the exercise.
 
 ### Step 3: Stop the capture
@@ -146,6 +160,8 @@ After the website had loaded:
 
 1. Return to Wireshark.
 2. Click the red square **Stop** button at the top-left corner.
+
+![alt text](
 
 This stops the live capture and allows you to examine the packets that have already been collected.
 
@@ -173,12 +189,13 @@ Enter:
 ```wireshark
 dns.qry.name == "networkwalks.com"
 ```
-
 Press Enter.
 
 This filter tells Wireshark to show DNS packets relating to the website `networkwalks.com`.
 
 You should see the DNS query and its corresponding response, provided the query was captured successfully.
+
+![alt text](
 
 ### Step 2: Identify the source and destination IP addresses
 
@@ -233,6 +250,8 @@ Remember, the DNS server is responsible for providing the IP address associated 
 
 The IP address displayed there is the IP address returned for the website.
 
+![alt text](
+
 ### Question 3: What is the IP address of networkwalks.com?
 
 **Answer:** The IP address shown under the DNS response's Answers section.
@@ -241,11 +260,7 @@ This was how I identified the website's IP address without having to guess or lo
 
 ### ***What if no DNS packets appear?***
 
-I encountered a situation where I entered the correct DNS filter but no packets appeared.
-
-After checking the possible causes, I went back and repeated the capture process.
-
-Here is what helped me resolve it:
+If you entered the correct DNS filter but no packets appeared.
 
 **1. Close the browser completely.**
 
@@ -306,6 +321,8 @@ tls.handshake.type == 1
 
 Press Enter.
 
+![alt text]( 
+
 This filter displays TLS Client Hello packets.
 
 ### Step 2: Find the correct packet
@@ -322,6 +339,8 @@ Look through the results for the Client Hello packet associated with `networkwal
 6. Expand the **Server Name Indication extension**.
 
 You should find the website name displayed there.
+
+![alt text](
 
 ### Question 4: Which website name (Server Name) is sent in the TLS Client Hello?
 
@@ -354,6 +373,9 @@ For example, HTTPS commonly uses port **443**.
 3. Expand the TCP section.
 4. Look for **Destination Port**.
 
+![alt text](
+
+
 For a normal HTTPS connection, you will commonly find:
 
 ### Question 5: Which server port is used for the secure connection?
@@ -362,7 +384,6 @@ For a normal HTTPS connection, you will commonly find:
 
 This is the standard port used for HTTPS.
 
-> **Note:** Some browsers may use QUIC for HTTP/3 instead of TCP. If you see QUIC traffic, that is not necessarily an error. Follow the packet details and protocol used in your own capture.
 
 ## 9. Finding the TLS Version
 
@@ -386,6 +407,8 @@ tls.handshake.type == 2
 
 Press Enter.
 
+![alt text](
+
 This filter displays TLS Server Hello packets.
 
 ### Step 2: Identify the correct packet
@@ -405,6 +428,8 @@ The TLS version displayed there gives you the answer to the final question in th
 For the example provided in the Network Walks lab guide, the answer was **TLSv1.3**.
 
 > **Important:** Your actual result should be based on the packet you captured.
+
+
 
 ## 10. Summary of the Wireshark Filters Used
 
