@@ -84,7 +84,7 @@ For this exercise, I wanted my laptop to perform a fresh DNS lookup so I could c
 4. Right-click it and select **Run as administrator**.
 5. If Windows asks for permission, allow it.
 
-![alt text](
+![alt text](https://github.com/PrudenceSelasiDela-Boso/Wireshark-Packet-Capture-and-Traffic-Analysis-A-Beginner-s-Walkthrough/blob/main/Screenshot%202026-11-05%20011745.png)
 
 ### Step 2: Flush the DNS cache
 
@@ -98,7 +98,7 @@ Press Enter.
 
 You should see a message confirming that the DNS Resolver Cache was successfully flushed.
 
-![alt text](
+![alt text](https://github.com/PrudenceSelasiDela-Boso/Wireshark-Packet-Capture-and-Traffic-Analysis-A-Beginner-s-Walkthrough/blob/main/Dns%20flush.png)
 
 This means the stored DNS records have been cleared, allowing the device to perform a fresh lookup when we visit the website.
 
@@ -110,7 +110,7 @@ When I first entered the command, I received this message:
 The requested operation requires elevation.
 ```
 
-![alt text](
+![alt text](https://github.com/PrudenceSelasiDela-Boso/Wireshark-Packet-Capture-and-Traffic-Analysis-A-Beginner-s-Walkthrough/blob/main/elevation.png)
 
 At first, I wasn't sure what the problem was. After looking into it, I understood that the command needed administrator privileges.
 
@@ -118,7 +118,7 @@ At first, I wasn't sure what the problem was. After looking into it, I understoo
 
 I closed the Command Prompt window, searched for CMD again, and selected **Run as administrator** before entering the command.
 
-![alt text](
+![alt text](https://github.com/PrudenceSelasiDela-Boso/Wireshark-Packet-Capture-and-Traffic-Analysis-A-Beginner-s-Walkthrough/blob/main/Screenshot%202026-11-05%20011745.png)
 
 That solved the problem.
 
