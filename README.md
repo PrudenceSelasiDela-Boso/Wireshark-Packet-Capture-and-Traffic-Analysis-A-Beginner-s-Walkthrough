@@ -403,7 +403,7 @@ tls.handshake.type == 2
 
 Press Enter.
 
-![alt text](
+![alt text](https://github.com/PrudenceSelasiDela-Boso/Wireshark-Packet-Capture-and-Traffic-Analysis-A-Beginner-s-Walkthrough/blob/main/TLS%20Version.png)
 
 This filter displays TLS Server Hello packets.
 
